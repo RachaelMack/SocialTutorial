@@ -33,6 +33,8 @@ app.configure(function() {
 
 });
 
+	app.use('/assets', express.static(__dirname + '/assets'));
+
 // routes ======================================================================
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
