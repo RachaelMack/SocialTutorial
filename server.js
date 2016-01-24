@@ -34,7 +34,8 @@ app.configure(function() {
 });
 
 	app.use('/assets', express.static(__dirname + '/assets'));
-
+	app.use('/node_modules', express.static(__dirname + '/node_modules'));
+	app.use('/views', express.static(__dirname + '/views'));
 // routes ======================================================================
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 

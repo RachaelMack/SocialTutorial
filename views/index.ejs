@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="socialApp">
 <head>
 	<title>Node Authentication</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
@@ -7,12 +7,15 @@
 
 	<!-- local css -->
 	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<!-- angular  -->
+	<script src="/node_modules/angular/angular.js"></script>
 	
-	<style>
-		body 		{ padding-top:80px; }
-	</style>
 </head>
-<body>
+<body ng-controller="navController">
+
+	<div ng-include="'/views/nav.ejs'"></div>
+
 <div class="container">
 
 	<div class="jumbotron text-center">
@@ -33,5 +36,9 @@
 	</div>
 
 </div>
+
+<script src="/assets/scripts/app.js"></script>
+<script src="/assets/scripts/controllers/navController.js"></script>
+
 </body>
 </html>
